@@ -1,0 +1,46 @@
+---
+title: "knapsacklab06-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{knapsacklab06-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(knapsacklab06)
+library(parallel) # package used for parallel computation
+```
+
+## setup
+To install the lab6 package, source it from GitHub with the command `devtools::install_github("........", build_vignettes = TRUE)`.
+
+#### Loading the Test Data
+
+```{r}
+RNGversion(min(as.character(getRversion()),"3.5.3"))
+
+set.seed(42, kind = "Mersenne-Twister", normal.kind = "Inversion")
+n <- 2000
+knapsack_objects <-
+  data.frame(
+    w=sample(1:4000, size = n, replace = TRUE),
+    v=runif(n = n, 0, 10000)
+)
+```
+
+## Usage of the Package
+
+### How the Package works
+
+The package includes three functions to solve the 0-1-knapsack-problem. All of the functions have an input `x` (a dataframe with columns `w` containing the weight of each element and `v` containing the value of the respective element) and `W` (the maximum weight the knapsack can carry).
+Furthermore, all the three functions return a list containing the maximum value (or a "good" solution like the `greedy_knapsack` function) under the given weight limit and the elements of this solution.
+
+
