@@ -1,0 +1,15 @@
+Package: knapsacklab06
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+        person("Samira", "Goudarzi", , "Samira.goudarzi@gmail.com", role = c("aut", "cre"))
+        person("Fatemeh", "Sharifiasl", , "sharifiasl.fateme@yahoo.com", role = c("aut", "cre"))
+Description: The package will contain three different functions for solving what is called the knapsack problem.
+        The knapsack problem is a discrete optimization problem where we have a knapsack that can take a
+        limited weight W and we want to fill this knapsack with a number of items i = 1,...,n, each with a
+        weight w and a value v. The goal is to find the knapsack with the largest value of the elements added
+        to the knapsack..
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
