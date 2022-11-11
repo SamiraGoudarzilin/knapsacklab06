@@ -1,5 +1,4 @@
 
-
 #' brutforce knapsack
 #'
 #' @param x vector
