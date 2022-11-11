@@ -1,25 +1,12 @@
 
 
-
-#' Title dynamic function for knapsack 
+#' dynamic function for knapsack 
 #'
 #' @param x a dataframe including v and w
 #' @param W maximum weight
 #'
 #' @return matimum value and elements
 #' @export
-#'
-#' @examples
-RNGversion(min(as.character(getRversion()),"3.5.3"))
-
-set.seed(42, kind = "Mersenne-Twister", normal.kind = "Inversion")
-n <- 2000
-knapsack_objects <-
-  data.frame(
-    w=sample(1:4000, size = n, replace = TRUE),
-    v=runif(n = n, 0, 10000)
-  )
-
 knapsack_dynamic <- function(x,W){
   # Check if input x is correct
   # if(!identical(names(x), c("w", "v")) || ncol(x) != 2 || typeof(x) != "list"){stop("x must be a dataframe with column names w and v")}
@@ -59,4 +46,6 @@ knapsack_dynamic <- function(x,W){
   return(result)
 } 
 
-knapsack_dynamic(x = knapsack_objects[1:8,], W = 3500)
+
+#-----------------------------------------------------
+# knapsack_dynamic(x = knapsack_objects[1:8,], W = 3500)

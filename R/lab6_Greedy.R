@@ -1,12 +1,14 @@
-RNGversion(min(as.character(getRversion()),"3.5.3"))
+# RNGversion(min(as.character(getRversion()),"3.5.3"))
+# 
+# set.seed(42, kind = "Mersenne-Twister", normal.kind = "Inversion")
+# n <- 2000
+# knapsack_objects <-
+#   data.frame(
+#     w=sample(1:4000, size = n, replace = TRUE),
+#     v=runif(n = n, 0, 10000)
+#   )
 
-set.seed(42, kind = "Mersenne-Twister", normal.kind = "Inversion")
-n <- 2000
-knapsack_objects <-
-  data.frame(
-    w=sample(1:4000, size = n, replace = TRUE),
-    v=runif(n = n, 0, 10000)
-  )
+#-----------------------------------------------------^^^^
 
 #'Greedy Function Knapsack
 #'
@@ -15,8 +17,7 @@ knapsack_objects <-
 #'
 #' @return Maximum value of all objects in the pack. 
 #' @export
-#'
-#' @examples
+
 greedy_knapsack <- function(x,W ) {
         if (typeof(x) != "list") {stop(" X should be a list")}
         if(W < 0){stop("W must not be negative")}
@@ -39,6 +40,6 @@ greedy_knapsack <- function(x,W ) {
           return(result)
 }        
 
-
-greedy_knapsack(x = knapsack_objects[1:800,], W = 3500)
-greedy_knapsack(x = knapsack_objects[1:1200,], W = 2000)
+#----------------------------------------------------- 
+# greedy_knapsack(x = knapsack_objects[1:800,], W = 3500)
+# greedy_knapsack(x = knapsack_objects[1:1200,], W = 2000)
