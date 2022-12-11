@@ -20,7 +20,7 @@
 
 greedy_knapsack <- function(x,W ) {
         if (typeof(x) != "list") {stop(" X should be a list")}
-        if(W < 0){stop("W must not be negative")}a
+        if(W < 0){stop("W must not be negative")}
   
         n <- nrow(x)
         x <- cbind(x,elements = c(1:n))

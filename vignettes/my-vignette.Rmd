@@ -36,7 +36,7 @@ knapsack_objects <-
     v=runif(n = n, 0, 10000)
     
 )
-#profvis::profvis({brute_force_knapsack(x = knapsack_objects[1:16,], W = 3500)})
+
 ```
 
 ## Usage of the Package
