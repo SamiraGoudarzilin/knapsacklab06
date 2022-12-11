@@ -60,7 +60,7 @@ a=end_time-start_time
 # print(a)
 cat("Question : How much time does it take to run the algorithm for n = 16 objects?","\n","Brute_force_knapsack function takes",a,"secs before parallaizing.")
 # print(b)
-profvis::profvis({brute_force_knapsack(x = knapsack_objects[1:16,], W = 3500)})
+# profvis::profvis({brute_force_knapsack(x = knapsack_objects[1:16,], W = 3500)})
 
 
 
